@@ -33,6 +33,33 @@ matrix:
       env:
         - MB_PYTHON_VERSION=3.7
 
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.6
+        - PLAT=aarch64
+        - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+        - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+    
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.7
+        - PLAT=aarch64
+        - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+        - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+ 
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.8
+        - PLAT=aarch64
+        - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+        - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
+
+    - os: linux
+      env:
+        - MB_PYTHON_VERSION=3.9
+        - PLAT=aarch64
+        - DOCKER_IMAGE=quay.io/pypa/manylinux2014_${PLAT}
+        - DOCKER_TEST_IMAGE=multibuild/xenial_arm64v8
 
     - os: osx
       osx_image: xcode8.3
