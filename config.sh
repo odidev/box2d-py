@@ -8,7 +8,10 @@ function pre_build {
 }
 
 function run_tests {
-    build_swig
+    if [ "$(uname -m)" == "aarch64" ]
+    then
+       yum install -y swig
+    fi
     pip install gym[box2d]
     python -c "import gym; gym.make('LunarLander-v2')"
 }
