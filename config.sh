@@ -8,6 +8,7 @@ function pre_build {
 }
 
 function run_tests {
+    build_swig
     pip install gym[box2d]
     python -c "import gym; gym.make('LunarLander-v2')"
 }
