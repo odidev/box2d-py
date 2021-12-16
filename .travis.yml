@@ -5,7 +5,7 @@ env:
     - PLAT=x86_64
 
 install: 
-  - git clone https://github.com/matthew-brett/multibuild
+  - git clone https://github.com/prakritichauhanpuresoftware/multibuild
   - . multibuild/common_utils.sh
   - . multibuild/travis_steps.sh
   - before_install 
